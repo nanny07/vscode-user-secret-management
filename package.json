@@ -1,0 +1,70 @@
+{
+  "name": "vscode-user-secret-management",
+  "displayName": "User Secret Management",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanny07/vscode-user-secret-management"
+  },
+  "author": {
+    "email": "nanny07@gmail.com",
+    "name": "Gianni Bonicolini",
+    "url": "https://github.com/nanny07"
+  },
+  "bugs": {
+    "url": "https://github.com/nanny07/vscode-user-secret-management/issues",
+    "email": "nanny07@gmail.com"
+  },
+  "icon": "images/icon.png",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-user-secret-management.manageUserSecret",
+        "title": "Manage User Secret"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "vscode-user-secret-management.manageUserSecret",
+          "when": "resourceExtname  == '.csproj' || resourceExtname  == '.vbproj' || resourceExtname  == '.fsproj'",
+          "group": "2_workspace"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@types/uuid": "^9.0.4",
+    "@types/vscode": "^1.82.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.3.2",
+    "uuid": "^9.0.1"
+  }
+}
