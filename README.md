@@ -15,7 +15,6 @@ It will open the `secret.json` file or create a new one and update your project 
 This extension has the following dependencies:
 
 * `uuid`: to generate a new GUID.
-* `fast-xml-parser`: to parse and modify the project file.
 
 ## Release Notes
 
