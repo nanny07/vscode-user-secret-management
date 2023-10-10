@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/nanny07/vscode-user-secret-management"
   },
+  "publisher": "giannibonicolini",
   "author": {
     "email": "nanny07@gmail.com",
     "name": "Gianni Bonicolini",
