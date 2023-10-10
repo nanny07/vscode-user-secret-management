@@ -6,9 +6,9 @@ View and manages user secretes for .NET Core/.NET5+ projects just like in Visual
 
 Right click on your `.csproj`, `.fsproj` or `.vbproj` file and select `Manage User Secrets`.
 
-It will open the `secret.json` file or create a new one and update your project file.
+It will open or create the `secret.json` file and update your project file if necessary.
 
-\!\[feature X\]\(images/feature-x.png\)
+![example](images/example.jpg)
 
 ## Requirements
 
@@ -23,10 +23,3 @@ This extension has the following dependencies:
 Initial release
 
 ---
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-

@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export function activate(context: vscode.ExtensionContext) {
 
-	let manageUserSecret = vscode.commands.registerCommand('vscode-user-secret-management.manageUserSecret', async (uri: vscode.Uri) => {
+	let manageUserSecret = vscode.commands.registerCommand('vscode-user-secret-management.manageUserSecrets', async (uri: vscode.Uri) => {
 
 		try {
 			if (uri) {
@@ -30,13 +30,12 @@ export function activate(context: vscode.ExtensionContext) {
 					userSecretsId = uuidv4();
 					const isEndProjectPresent = xmlFileData.match(endProjectRegex);
 
-					if(!isEndProjectPresent)
-					{
+					if (!isEndProjectPresent) {
 						return;
 					}
 
 					const position = projectDocument.positionAt(isEndProjectPresent.index!);
-					wsedit.insert(uri, position, "    <UserSecretsId>" + userSecretsId + "</UserSecretsId>" + os.EOL + "  ");
+					wsedit.insert(uri, position, "  <UserSecretsId>" + userSecretsId + "</UserSecretsId>" + os.EOL + "  ");
 				}
 
 				const userSecretsFilePath = getUserSecretJsonPath(userSecretsId!);

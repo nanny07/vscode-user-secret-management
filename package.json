@@ -1,7 +1,7 @@
 {
   "name": "vscode-user-secret-management",
-  "displayName": "User Secret Management",
-  "description": "",
+  "displayName": "User Secrets Management",
+  "description": "An extension that replicates the User Secrets management present on Visual Studio",
   "repository": {
     "type": "git",
     "url": "https://github.com/nanny07/vscode-user-secret-management"
@@ -23,20 +23,29 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    ".NET",
+    ".NET Core",
+    "C#",
+    "F#",
+    "VB .NET",
+    "ASP.NET Core",
+    "User Secrets"
+  ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-user-secret-management.manageUserSecret",
-        "title": "Manage User Secret"
+        "command": "vscode-user-secret-management.manageUserSecrets",
+        "title": "Manage User Secrets"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "vscode-user-secret-management.manageUserSecret",
-          "when": "resourceExtname  == '.csproj' || resourceExtname  == '.vbproj' || resourceExtname  == '.fsproj'",
+          "command": "vscode-user-secret-management.manageUserSecrets",
+          "when": "resourceScheme == file && (resourceExtname  == '.csproj' || resourceExtname  == '.vbproj' || resourceExtname  == '.fsproj')",
           "group": "2_workspace"
         }
       ]
