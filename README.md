@@ -16,6 +16,10 @@ This extension has the following dependencies:
 
 * `uuid`: to generate a new GUID.
 
+## Future improvement
+
+In the future, this extension will directly use the `dotnet user-secrets init` command to generate the new GUID and update the project file. For now, it's not possible to wait until the end of a terminal run using Terminal.API on vscode ([see the issue on vscode's repository](https://github.com/microsoft/vscode/issues/145234))
+
 ## Release Notes
 
 ### 1.0.0
